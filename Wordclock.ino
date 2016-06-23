@@ -37,7 +37,7 @@ int TemperatureDizaine = -1 ; //variable temporaire pour éviter le clignotement
 int TemperatureUnite = - 1; //variable temporaire pour éviter le clignotement lors de la mise à jour de la temperature
 
 // Variables et constantes d'état des switchs
-const int SwitchHTpin = 2;     // le switch Heure/Température sur le pin 2
+const int SwitchHTpin = 2;     // le switch Heure/Température sur le pin 2 test
 int SwitchHTstatus = 0;
 int CaaChangeOuPas = HIGH;
 
