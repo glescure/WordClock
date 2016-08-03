@@ -56,6 +56,7 @@ int arrVINGT_CINQ[] = {90,91,92,93,94,95,96,97,98,99,-1};
 int arrDIX_MINUTES[] = {76,77,78,-1};
 int arrHEURE[] = {58,59,60,61,62,-1}; 
 int arrHEURES[] = {57,58,59,60,61,62,-1};
+int arrTIRET[] = {95,-1};
 
 int arrUNE[] = {28,29,30,-1};
 int arrDEUX[] = {8,9,10,11,-1};
@@ -443,7 +444,9 @@ paintWord(arrET_DEMIE, colorBlack);
 paintWord(arrVINGT_CINQ, colorWhite);
 } 
 if((minute>39) && (minute<45)) {
+//MOINS VINGT
 paintWord(arrCINQ_MINUTES, colorBlack);
+paintWord(arrTIRET, colorBlack); //on efface le tiret du ving-cinq qui était affiché durant les 5 minutes précedentes et qu'on ne peut supprimer en passant arrVINGT_CINQ en colorblack, car ça empecherait d'aficher arrVINGT
 paintWord(arrDIX_MINUTES, colorBlack);
 paintWord(arrET, colorBlack);
 paintWord(arrLE, colorBlack);
@@ -453,7 +456,8 @@ paintWord(arrVINGT_MINUTES, colorWhite);
 //paintWord(arrVINGT_CINQ, colorBlack);
 }
 if((minute>44) && (minute<50)) {
-paintWord(arrCINQ_MINUTES, colorBlack);
+//MOINS LE QUART
+  paintWord(arrCINQ_MINUTES, colorBlack);
 paintWord(arrDIX_MINUTES, colorBlack);
 paintWord(arrET, colorBlack);
 paintWord(arrLE, colorWhite);
@@ -463,6 +467,7 @@ paintWord(arrVINGT_MINUTES, colorBlack);
 paintWord(arrVINGT_CINQ, colorBlack);
 }
 if((minute>49) && (minute<55)){
+//MOINS DIX
 paintWord(arrCINQ_MINUTES, colorBlack);
 paintWord(arrDIX_MINUTES, colorWhite);
 paintWord(arrET, colorBlack);
@@ -473,6 +478,7 @@ paintWord(arrVINGT_MINUTES, colorBlack);
 paintWord(arrVINGT_CINQ, colorBlack);
 } 
 if(minute>54){
+// MOINS CINQ
 paintWord(arrCINQ_MINUTES, colorWhite);
 paintWord(arrDIX_MINUTES, colorBlack);
 paintWord(arrET, colorBlack);
