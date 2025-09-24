@@ -2,7 +2,9 @@
 
 //Librairie Température
 #include "DHT.h"
-DHT dht;
+
+#define DHTPIN 10
+DHT dht(DHTPIN, DHT22);
 
 //Librairie récupération de l'heure
 #include <Process.h>
@@ -125,7 +127,7 @@ grid.show();
 Serial.println();
 Serial.println("Status\tHumidity (%)\tTemperature (C)\t(F)");
 
-dht.setup(10); // data de température sur le pin 10
+dht.begin(); // data de température sur le pin 10
 
 pinMode(SwitchHTpin, INPUT);
 
@@ -199,7 +201,7 @@ void displayTemperature(){
   
   //delay(dht.getMinimumSamplingPeriod());
 
-  int temperature = dht.getTemperature();
+  int temperature = dht.readTemperature();
 
   //Serial.print(dht.getStatusString());
   //Serial.print("\t\t");
@@ -1035,5 +1037,4 @@ grid.show();
 delay(time); 
 }
 }
-
 
